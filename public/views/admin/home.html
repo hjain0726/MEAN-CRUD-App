@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Users Listing</h2>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Rollno</th>
+            <th>Operations</th>
+        </tr>
+        <tr ng-repeat="user in users.data">
+            <td>{{user.name}}</td>
+            <td>{{user.rollno}}</td>
+            <td>
+                <a class="btn btn-primary " ng-click="edit(user)">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>&nbsp;
+                <a class="btn btn-success " ng-click="delete(user)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>&nbsp;
+            </td>
+        </tr>
+    </table>
+    <!--<div ng-if="users.length==0">
+         No record found !!
+        </div>-->
+</div>
